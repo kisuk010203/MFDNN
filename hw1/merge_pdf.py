@@ -14,7 +14,7 @@ def merge_pdfs(pdf_list, output):
 
 
 # List of pdfs to merge
-pdfs = [f"Learning rate : {alpha}.pdf" for alpha in [0.01, 0.3, 4]]
+pdfs = [f"Learning rate : {alpha}.pdf" for alpha in [0.01, 0.3, 4]] + ["conv1D.pdf"]
 
 # Output pdf file
 output_pdf = "HW1_programming.pdf"

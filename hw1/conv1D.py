@@ -31,12 +31,9 @@ class TransposedConvolution1d:
         return np.array(
             [
                 (
-                    np.sum(reverse_filt * vector[i - r + 1 : i + 1])
-                    if r - 1 <= i <= n - r
-                    else (
-                        np.sum(self.__filt[: i + 1][::-1] * vector[: i + 1])
-                        if i < r - 1
-                        else np.sum(reverse_filt[: n - i + 1] * vector[i - r :])
+                    np.sum(
+                        reverse_filt[max(0, r - i - 1) : min(n - i, r)]
+                        * vector[max(0, i - r + 1) : min(i + 1, n - r + 1)]
                     )
                 )
                 for i in range(n)
