@@ -1,8 +1,10 @@
 from PIL import Image
 from reportlab.pdfgen import canvas
+import sys
 
 
-def convert_png_to_pdf(png_path, pdf_path):
+def convert_png_to_pdf(png_path):
+    pdf_path = png_path.split(".")[0] + ".pdf"
     # Open the image file
     img = Image.open(png_path)
     # If the image has an alpha channel, convert it to white background
@@ -19,5 +21,7 @@ def convert_png_to_pdf(png_path, pdf_path):
     c.save()
 
 
+
 # Usage
-convert_png_to_pdf("conv1D.png", "conv1D.pdf")
+png_path = sys.argv[1]
+convert_png_to_pdf(png_path)
