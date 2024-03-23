@@ -11,7 +11,7 @@ python merge_pdf hw1
 Then, it gathers all the `pdf` files inside `hw1` and merges them in alphabetical order.
 
 ### `png_to_pdf.py`
-From the root directory, run the fillowing code in the terminal.
+From the root directory, run the following code in the terminal.
 ```shell
 python png_to_pdf.py hw2/Problem\ 2_2.png
 ```
