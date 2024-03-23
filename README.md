@@ -13,6 +13,6 @@ Then, it gathers all the `pdf` files inside `hw1` and merges them in alphabetica
 ### `png_to_pdf.py`
 From the root directory, run the fillowing code in the terminal.
 ```shell
-python pnf_to_pdf.py hw2/Problem\ 2_2.png
+python png_to_pdf.py hw2/Problem\ 2_2.png
 ```
 I should add features to let all the `png` files be turned into `pdf` but I was lazy.
